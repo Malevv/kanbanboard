@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0%;
+        }
+        
+        .all-box {
+            width: 100%;
+            margin: 12%;
+        }
+        
+        .box2 {
+            height: 365px;
+            border-radius: 20px;
+            margin-right: 20%;
+            box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.651);
+            background-color: #D6E6F2;
+        }
+        
+        .title-date {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 100px;
+        }
+        
+        .title {
+            width: 270px;
+        }
+        
+        .title-field {
+            height: 30px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+        }
+        
+        .date {
+            width: 270px;
+        }
+        
+        .category-priority {
+            display: flex;
+            flex-direction: row;
+            height: 85px;
+            justify-content: space-around;
+        }
+        
+        .cat-prio {
+            border-radius: 5px;
+            height: 30px;
+            width: 150px;
+        }
+        
+        .category {
+            width: 270px;
+        }
+        
+        .priority {
+            width: 270px;
+        }
+        
+        .description-member {
+            display: flex;
+            flex-direction: row;
+            height: 115px;
+            justify-content: space-around;
+        }
+        
+        .description {
+            width: 270px;
+        }
+        
+        .description-field {
+            height: 87px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+        }
+        
+        .member {
+            width: 270px;
+        }
+    </style>
+
+    <script>
+        function getDate() {
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="all-box">
+
+
+
+        <div class="box1">
+            <h1><b>Add Task</b></h1>
+            <p class="font">Learning Management System Project</p>
+        </div>
+
+
+
+        <div class="box2">
+
+            <div class="title-date">
+
+                <div class="title">
+                    <h4>TITLE</h4>
+                    <input type="text" class="title-field" id="title_field">
+                </div>
+
+                <div class="date">
+                    <h4>DUE DATE</h4>
+                    <input type="date" id="start" name="trip-start" value="2021-12-09" min="2018-01-01" max="2021-12-31"> </div>
+
+            </div>
+
+
+            <div class="category-priority">
+                <div class="category">
+
+                    <h4>CATEGORY</h4>
+
+                    <select class="cat-prio" id="cat-prio">
+                            <option value="free">IT-Management</option>
+                            <option value="bronze">Purchasing</option>
+                            <option value="silver">Sales-Management</option>
+                            <option value="Gold">Logistic-Management</option>
+                        </select>
+                </div>
+
+
+
+
+                <div class="priority">
+                    <h4>URGENCY</h4>
+                    <select class="cat-prio" id="cat-prio">
+                            <option value="free">Free</option>
+                            <option value="bronze">Bronze</option>
+                            <option value="silver" selected>Silver</option>
+                            <option value="Gold">Gold</option>
+                        </select>
+
+                </div>
+
+            </div>
+
+            <div class="description-member">
+                <div class="description">
+
+                    <h4>DESCRIPTION</h4>
+                    <input type="text" class="description-field" id="description">
+
+                </div>
+
+                <div class="member">
+                    <h4>ASSIGNED TO</h4>
+                    <img src="">
+                    <button>CANCEL</button>
+                    <button>CREATE TASK</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
