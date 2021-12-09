@@ -10,6 +10,7 @@
     <style>
         body {
             margin: 0%;
+            font-family: sans-serif !important;
         }
         
         .all-box {
@@ -38,9 +39,10 @@
         
         .title-field {
             height: 30px;
-            width: 250px;
+            width: 240px;
             border-radius: 5px;
             border: none;
+            padding-left: 10px;
         }
         
         .date {
@@ -81,9 +83,10 @@
         
         .description-field {
             height: 87px;
-            width: 250px;
+            width: 240px;
             border-radius: 5px;
             border: none;
+            padding-left: 10px;
         }
         
         .member {
@@ -118,12 +121,12 @@
 
                 <div class="title">
                     <h4>TITLE</h4>
-                    <input type="text" class="title-field" id="title_field">
+                    <input placeholder="select your title" type="text" class="title-field" id="title_field">
                 </div>
 
                 <div class="date">
                     <h4>DUE DATE</h4>
-                    <input type="date" id="start" name="trip-start" value="2021-12-09" min="2018-01-01" max="2021-12-31"> </div>
+                    <input type="date" class="title-field" id="start" name="trip-start" value="2021-12-09" min="2018-01-01" max="2021-12-31"> </div>
 
             </div>
 
@@ -161,14 +164,12 @@
                 <div class="description">
 
                     <h4>DESCRIPTION</h4>
-                    <input type="text" class="description-field" id="description">
-
+                    <!-- <input type="text"  id="description"> -->
+                    <textarea class="description-field" placeholder="type here..." id="description" cols="30" rows="10"></textarea>
                 </div>
 
                 <div class="member">
                     <h4>ASSIGNED TO</h4>
-                    <img src="">
-                    <button>CANCEL</button>
                     <button>CREATE TASK</button>
                 </div>
 
