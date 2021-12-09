@@ -13,35 +13,38 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="board.css">
     <script src="board.js"></script>
+    <script src="includeHTML.js"></script>
+    <link rel="stylesheet" href="./templates/header.css">
 </head>
 
-<body>
+<body onload="includeHTML()">
 
+    <div w3-include-html="./templates/header.html"></div>
 
-    <div class="textAndField">
+    <div class="textAndField margin">
         <div><h4>TO DO</h4></div>
-        <div class="board-card"></div>
+        <div class="board-card  bg1"></div>
     </div>
 
 
     <div class="textAndField">
         <div><h4>DO TODAY</h4></div>
-        <div class="board-card"></div>
+        <div class="board-card  bg2"></div>
     </div>
 
     <div class="textAndField">
         <div><h4>IN PROGRESS</h4></div>
-        <div class="board-card"></div>
+        <div class="board-card  bg3"></div>
     </div>
 
 
     <div class="textAndField">
         <div><h4>DONE</h4></div>
-        <div class="board-card"></div>
+        <div class="board-card bg4"></div>
     </div>
 
 
-
+    <!-- Strg + # (Raute)  -->
 
 
 
