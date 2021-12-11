@@ -22,22 +22,85 @@ body {
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
+    border-bottom: solid rgb(48,52,129) 2px;
+    box-shadow: 2px 3px 2px 0px rgba(0, 0, 0, 0.651)
+    
+}
+
+.textAndField {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.651);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    margin-top: 10px;
+}
+.prioH {
+    width: 10px;
+    background-color: rgba(247, 43, 104, 0.767);
+    border-radius: 10px 0px 0 10px;
+}
+
+.prioM {
+    width: 10px;
+    background-color: rgb(250, 147, 87);
+    border-radius: 10px 0px 0 10px;
+}
+
+.prioL {
+    width: 10px;
+    background-color: rgb(172, 209, 86);
+    border-radius: 10px 0px 0 10px;
 }
 
 .board-card {
     /*background-color: #D6E6F2;*/
     width: 100%;
-    height: 160px;
+    height: 60px;
     border-radius: 10px;
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.651);
-    background-color: white;
-    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    align-items: center;
+    
+    
 }
 
 .cont-inside {
-    width: 8px;
-    height: 160px;
-    background-color: hotpink;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    display: flex;
+    margin-left: 45px;
+    flex-direction: column;
+    
+    
+}
+
+input {
+    width: auto;
+    height: 20px;
+    margin: 5px;
+    text-align: center;
+    border: none;
+    
+}
+
+.category {
+    margin-left: 125px;
+    
+}
+
+textarea {
+    width: 400px;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 5px;
+    padding-left: 5px;
+    border: none;
+    font-size: 12px;
+    text-align: start;
 }
