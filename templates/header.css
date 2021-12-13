@@ -1,6 +1,13 @@
 .bg-light {
     background-color: rgb(48, 52, 129) !important;
 }
+.container-fluid img {
+    width: 160px !important;
+    height: auto;
+    margin-top: 0 !important;
+    margin-left: 30px !important;
+    margin-bottom: 0 !important;
+}
 
 .navbar-light .navbar-toggler:hover {
     color: rgba(255, 255, 255, 0.849) !important;
