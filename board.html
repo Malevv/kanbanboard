@@ -15,31 +15,49 @@
     <script src="board.js"></script>
     <script src="includeHTML.js"></script>
     <link rel="stylesheet" href="./templates/header.css">
+    <script src="add-task.js"></script>
+    <script src="./mini_backend.js"></script>
+    <script>
+        setURL('http://intensivgruppe-6.developerakademie.net//smallest_backend_ever');
+
+        async function init() {
+            await downloadFromServer();
+            tasks = JSON.parse(backend.getItem('tasks')) || [];
+        }
+    </script>
 </head>
 
-<body onload="includeHTML()">
+<body onload="init(), includeHTML()">
 
     <div w3-include-html="./templates/header.html"></div>
 
     <div class="textAndField margin">
-        <div><h4>TO DO</h4></div>
+        <div>
+            <h4>TO DO</h4>
+        </div>
         <div class="board-card  bg1"></div>
     </div>
 
 
     <div class="textAndField">
-        <div><h4>DO TODAY</h4></div>
+        <div>
+            <h4>DO TODAY</h4>
+        </div>
         <div class="board-card  bg2"></div>
     </div>
 
     <div class="textAndField">
-        <div><h4>IN PROGRESS</h4></div>
+        <div>
+            <h4>IN PROGRESS</h4>
+        </div>
         <div class="board-card  bg3"></div>
     </div>
 
 
     <div class="textAndField">
-        <div><h5>DONE</h5></div>
+        <div>
+            <h5>DONE</h5>
+        </div>
         <div class="board-card bg4"></div>
     </div>
 

@@ -15,11 +15,12 @@
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 
-
-
+    <script src="add-task.js"></script>
+    <script src="./mini_backend.js"></script>
 
     <title>AddTask</title>
 
@@ -47,9 +48,11 @@
 
         .box1 {
             margin-left: 20px;
+            margin-top: 50px;
         }
 
         .box2 {
+            width: 700px;
             height: 365px;
             border-radius: 20px;
             margin-right: 20%;
@@ -141,7 +144,7 @@
             text-decoration: none;
             font-family: "Open Sans";
             text-transform: uppercase;
-            background-color: rgb(48,52,129);
+            background-color: rgb(48, 52, 129);
             border: none;
             margin-top: 25px;
             margin-left: -6px;
@@ -189,14 +192,17 @@
     </style>
 
     <script>
-        function getDate() {
+        setURL('http://intensivgruppe-6.developerakademie.net/smallest_backend_ever');
 
+        async function init() {
+            await downloadFromServer();
+            tasks = JSON.parse(backend.getItem('tasks')) || [];
         }
     </script>
 
 </head>
 
-<body onload="includeHTML()">
+<body onload="init(), includeHTML()">
 
     <div w3-include-html="./templates/header.html"></div>
 
@@ -234,11 +240,12 @@
 
                     <h4>CATEGORY</h4>
 
-                    <select class="cat-prio" id="cat-prio">
-                        <option value="free">IT-Management</option>
-                        <option value="bronze">Purchasing</option>
-                        <option value="silver">Sales-Management</option>
-                        <option value="Gold">Logistic-Management</option>
+                    <select class="cat-prio" id="cat">
+                        <option value="" disabled selected>choose...</option>
+                        <option value="IT-Management">IT-Management</option>
+                        <option value="Purchasing">Purchasing</option>
+                        <option value="Sales-Management">Sales-Management</option>
+                        <option value="Logistic-Management">Logistic-Management</option>
                     </select>
                 </div>
 
@@ -248,9 +255,9 @@
                 <div class="priority">
                     <h4>URGENCY</h4>
                     <select class="cat-prio" id="cat-prio">
-                        <option value="free">Low</option>
-                        <option value="bronze">Medium</option>
-                        <option value="silver" selected>High</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High" selected>High</option>
                     </select>
 
                 </div>
@@ -261,14 +268,14 @@
                 <div class="description">
 
                     <h4>DESCRIPTION</h4>
-                    <!-- <input type="text"  id="description"> -->
+
                     <textarea class="description-field" placeholder="type here..." id="description" cols="30"
                         rows="10"></textarea>
                 </div>
 
                 <div class="member">
                     <h4>ASSIGNED TO</h4>
-                    <button class="btn-flip" data-back="Success" data-front="Create Task"></button>
+                    <button onclick="addTasks()" class="btn-flip" data-back="Success" data-front="Create Task"></button>
                 </div>
 
             </div>
@@ -278,6 +285,7 @@
 
 
     </div>
+
 
 
 </body>

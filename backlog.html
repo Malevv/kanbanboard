@@ -14,9 +14,21 @@
     <script src="includeHTML.js"></script>
     <link rel="stylesheet" href="./templates/header.css">
     <link rel="stylesheet" href="backlog.css">
+    <script src="add-task.js"></script>
+    <script src="backlog.js"></script>
+    <script src="./mini_backend.js"></script>
+    <script>
+        setURL('http://intensivgruppe-6.developerakademie.net//smallest_backend_ever');
+
+        async function init() {
+            await downloadFromServer();
+            tasks = JSON.parse(backend.getItem('tasks')) || [];
+            backlog();
+        }
+    </script>
 </head>
 
-<body onload="includeHTML()">
+<body onload="init(), includeHTML()">
 
     <div w3-include-html="./templates/header.html"></div>
 
@@ -40,70 +52,71 @@
         </div>
     </div>
 
-    <div class="textAndField">
-        <!-- //PrioKlassenfelder für aktivierung punkt enfernen!// -->
-        <div class="prioH .prioM .prioL .dnone">
-            <div>
-                <img src="images/Maria.png" alt="">
-            </div>
+    <div id="showTasksBacklog">
+        <div class="textAndField">
+            <!-- //PrioKlassenfelder für aktivierung punkt enfernen!// -->
+            <div class="prioH .prioM .prioL .dnone">
+                <div>
+                    <img src="images/Maria.png" alt="">
+                </div>
 
+            </div>
+            <div class="board-card  bg1">
+                <div class="cont-inside"><input type="text" placeholder="Name"><input type="text" placeholder="E-mail">
+                </div>
+                <div>
+                    <input class="category" type="text" placeholder="Category">
+                </div>
+                <div>
+                    <textarea name=""
+                        id="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veritatis provident consequatur, nobis voluptatem dolore ipsam, hic velit sequi!</textarea>
+                </div>
+            </div>
         </div>
-        <div class="board-card  bg1">
-            <div class="cont-inside"><input type="text" placeholder="Name"><input type="text" placeholder="E-mail">
+
+
+        <div class="textAndField">
+            <!-- //PrioKlassenfelder für aktivierung punkt enfernen!// -->
+            <div class=".prioH prioM .prioL .dnone">
+                <div>
+                    <img src="images/Malte.png" alt="">
+                </div>
             </div>
-            <div>
-                <input class="category" type="text" placeholder="Category">
+            <div class="board-card  bg1">
+                <div class="cont-inside"><input type="text" placeholder="Name"><input type="text" placeholder="E-mail">
+                </div>
+                <div>
+                    <input class="category" type="text" placeholder="Category">
+                </div>
+                <div>
+                    <textarea name=""
+                        id="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veritatis provident consequatur, nobis voluptatem dolore ipsam, hic velit sequi!</textarea>
+                </div>
             </div>
-            <div>
-                <textarea name=""
-                    id="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veritatis provident consequatur, nobis voluptatem dolore ipsam, hic velit sequi!</textarea>
+        </div>
+
+
+        <div class="textAndField">
+            <!-- //PrioKlassenfelder für aktivierung punkt enfernen!// -->
+            <div class=".prioH .prioM prioL .dnone">
+                <div>
+                    <img src="images/Luisa.png" alt="">
+                </div>
+
+            </div>
+            <div class="board-card  bg1">
+                <div class="cont-inside"><input type="text" placeholder="Name"><input type="text" placeholder="E-mail">
+                </div>
+                <div>
+                    <input class="category" type="text" placeholder="Category">
+                </div>
+                <div>
+                    <textarea name=""
+                        id="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veritatis provident consequatur, nobis voluptatem dolore ipsam, hic velit sequi!</textarea>
+                </div>
             </div>
         </div>
     </div>
-
-
-    <div class="textAndField">
-        <!-- //PrioKlassenfelder für aktivierung punkt enfernen!// -->
-        <div class=".prioH prioM .prioL .dnone">
-            <div>
-                <img src="images/Malte.png" alt="">
-            </div>
-        </div>
-        <div class="board-card  bg1">
-            <div class="cont-inside"><input type="text" placeholder="Name"><input type="text" placeholder="E-mail">
-            </div>
-            <div>
-                <input class="category" type="text" placeholder="Category">
-            </div>
-            <div>
-                <textarea name=""
-                    id="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veritatis provident consequatur, nobis voluptatem dolore ipsam, hic velit sequi!</textarea>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="textAndField">
-        <!-- //PrioKlassenfelder für aktivierung punkt enfernen!// -->
-        <div class=".prioH .prioM prioL .dnone">
-            <div>
-                <img src="images/Luisa.png" alt="">
-            </div>
-
-        </div>
-        <div class="board-card  bg1">
-            <div class="cont-inside"><input type="text" placeholder="Name"><input type="text" placeholder="E-mail">
-            </div>
-            <div>
-                <input class="category" type="text" placeholder="Category">
-            </div>
-            <div>
-                <textarea name=""
-                    id="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veritatis provident consequatur, nobis voluptatem dolore ipsam, hic velit sequi!</textarea>
-            </div>
-        </div>
-    </div>
-
 
 
 </body>
