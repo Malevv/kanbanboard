@@ -1,3 +1,5 @@
+
+
 function backlog() {
     for (let i = 0; i < tasks.length; i++) {
         // backend funktioniert nicht, anil fragen??
@@ -39,22 +41,21 @@ function backlog() {
 }
 
 
-
+//------------------Color change of Priority-------------//
 function prioType(i) {
-    // let prioColor = document.getElementById('prioColor'+ i).innerHTML;
 
-if (tasks[i]['priority'] == document.getElementById('low')) {
-    document.getElementById('prioColor' + i).classList.remove('dnone');
-    document.getElementById('prioColor' + i).classList.add('prioL');    
-}
+    if (tasks[i]['priority'] == 'low') {
+        document.getElementById('prioColor' + i).classList.remove('dnone');
+        document.getElementById('prioColor' + i).classList.add('prioL');
+    }
 
+    if (tasks[i]['priority'] == 'medium') {
+        document.getElementById('prioColor' + i).classList.remove('dnone');
+        document.getElementById('prioColor' + i).classList.add('prioM');
+    }
 
-    // document.getElementById('prioColor' + i).classList.remove('dnone');
-    // document.getElementById('prioColor' + i).classList.add('prioL');
-
-    // if (tasks[i]['priority'] == low) {
-    //     document.getElementById('prioColor').classList.remove('dnone');
-    //     document.getElementById('prioColor').classList.add('prioL');
-    // }
-
+    if (tasks[i]['priority'] == 'high') {
+        document.getElementById('prioColor' + i).classList.remove('dnone');
+        document.getElementById('prioColor' + i).classList.add('prioH');
+    }
 }

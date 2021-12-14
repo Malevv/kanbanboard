@@ -1,3 +1,4 @@
+
 function boardinfo() {
     for (let i = 0; i < tasks.length; i++) {
         // backend funktioniert nicht, anil fragen??
@@ -11,18 +12,11 @@ function boardinfo() {
         // type= email?? damit email richtig angegeben wird
         // google: HTML5 form validation (weitere Tipps um die form von add tasks zu optimieren)
         document.getElementById('boardContent').innerHTML += `
-         
-          <div class="dropdown">
-                <button class="distance btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    ${tasks[i].title}
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="">
-                    <li><a class="dropdown-item" href="#">${tasks[i].date}</a></li>
-                    <li><a class="dropdown-item" href="#">${tasks[i].category}</a></li>
-                    <li><a class="dropdown-item" href="backlog.html">Link to</a></li>
-                </ul>
-            </div>
+
+            <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+                data-bs-placement="top" data-bs-content="${tasks[i].date}<br>${tasks[i].category}<br>">
+                ${tasks[i].title}
+            </button>
          `;
 
     }
