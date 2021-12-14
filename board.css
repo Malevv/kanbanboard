@@ -16,6 +16,13 @@ body {
     height: 120px;
     border-radius: 10px;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.651);
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+}
+
+.dropdown {
+    padding: 5px;
 }
 
 .textAndField {
@@ -65,3 +72,4 @@ div h5 {
 .bg4 {
     background-color: rgba(0, 255, 76, 0.233);
 }
+
