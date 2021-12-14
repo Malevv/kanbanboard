@@ -23,6 +23,7 @@
         async function init() {
             await downloadFromServer();
             tasks = JSON.parse(backend.getItem('tasks')) || [];
+            boardinfo();
         }
     </script>
 </head>
@@ -35,7 +36,9 @@
         <div>
             <h4>TO DO</h4>
         </div>
-        <div class="board-card  bg1"></div>
+        <div id="boardContent" class="board-card  bg1">
+            
+        </div>
     </div>
 
 
