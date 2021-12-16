@@ -1,6 +1,6 @@
 var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
     container: 'body'
-  })
+})
 
 
 
@@ -18,20 +18,13 @@ function boardinfo() {
         // type= email?? damit email richtig angegeben wird
         // google: HTML5 form validation (weitere Tipps um die form von add tasks zu optimieren)
         document.getElementById('boardContent').innerHTML += `
-         
-          <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1${i}"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    ${tasks[i].title}
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="${tasks[i].title}">
-                    <li><a class="dropdown-item" href="#">${tasks[i].date}</a></li>
-                    <li><a class="dropdown-item" href="#">${tasks[i].category}</a></li>
-                    <li><a class="dropdown-item" href="backlog.html">Link to</a></li>
-                </ul>
-            </div>
+         <div>
+            <div id="color${i}" class="popup btn-secondary" onclick="poppey(${i})">${tasks[i].title}
+            <span class="popuptext" id="Popup${i}">${tasks[i].date} asdfsdfasfaf ${tasks[i].category}</span>
+          </div>
+          </div>
          `;
-         boardButton(i)
+        boardButton(i)
 
     }
 
@@ -40,18 +33,35 @@ function boardinfo() {
 function boardButton(i) {
 
     if (tasks[i]['priority'] == 'low') {
-        document.getElementById('dropdownMenuButton1' + i).classList.remove('btn-secondary');
-        document.getElementById('dropdownMenuButton1' + i).classList.add('btn-success');
+        document.getElementById('color' + i).classList.remove('btn-secondary');
+        document.getElementById('color' + i).classList.add('btn-success');
     }
 
     if (tasks[i]['priority'] == 'medium') {
-        document.getElementById('dropdownMenuButton1' + i).classList.remove('btn-secondary');
-        document.getElementById('dropdownMenuButton1' + i).classList.add('btn-warning');
+        document.getElementById('color' + i).classList.remove('btn-secondary');
+        document.getElementById('color' + i).classList.add('btn-warning');
     }
 
     if (tasks[i]['priority'] == 'high') {
-        document.getElementById('dropdownMenuButton1' + i).classList.remove('btn-secondary');
-        document.getElementById('dropdownMenuButton1' + i).classList.add('btn-danger');
+        document.getElementById('color' + i).classList.remove('btn-secondary');
+        document.getElementById('color' + i).classList.add('btn-danger');
     }
 }
 
+function poppey(i) {
+    let popup = document.getElementById("Popup" + i);
+    popup.classList.toggle("show");
+}
+
+
+{/* <div class="dropdown">
+<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1${i}"
+    data-bs-toggle="dropdown" aria-expanded="false">
+    ${tasks[i].title}
+</button>
+<ul class="dropdown-menu" aria-labelledby="${tasks[i].title}">
+    <li><a class="dropdown-item" href="#">${tasks[i].date}</a></li>
+    <li><a class="dropdown-item" href="#">${tasks[i].category}</a></li>
+    <li><a class="dropdown-item" href="backlog.html">Link to</a></li>
+</ul>
+</div> */}

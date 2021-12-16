@@ -1,5 +1,6 @@
 .bg-light {
     background-color: rgb(48, 52, 129) !important;
+    z-index: 0 !important;
 }
 .container-fluid img {
     width: 160px !important;
@@ -7,11 +8,14 @@
     margin-top: 0 !important;
     margin-left: 30px !important;
     margin-bottom: 0 !important;
+   
 }
 
 .navbar-light .navbar-toggler:hover {
     color: rgba(255, 255, 255, 0.849) !important;
     border-color: rgba(255, 255, 255, 0.87) 2px !important;
+    
+    
 }
 
 /* Hintergrundfarbe vom Klappmenu */
