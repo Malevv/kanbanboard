@@ -20,7 +20,7 @@ function boardinfo() {
         document.getElementById('boardContent').innerHTML += `
          <div>
             <div id="color${i}" class="popup btn-secondary" onclick="poppey(${i})">${tasks[i].title}
-            <span class="popuptext" id="Popup${i}">${tasks[i].date} asdfsdfasfaf ${tasks[i].category}</span>
+            <span class="popuptext" id="Popup${i}">${tasks[i].date}<br>${tasks[i].category}<br><a class="link" href="backlog.html">Link to Oder</a></span>
           </div>
           </div>
          `;

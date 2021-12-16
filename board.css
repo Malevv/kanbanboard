@@ -9,6 +9,11 @@ body {
    margin-top: 150px; 
 }
 
+.link {
+  color: white;
+  text-decoration: none;
+}
+
 
 .board-card {
     /*background-color: #D6E6F2;*/
@@ -83,8 +88,8 @@ div h5 {
     width: auto;
     height: 35px;
     border-radius: 5px;
-    margin: 3px;
-    overflow: hidden;
+    margin: 4px;
+    padding: 3px;
   }
 
  
