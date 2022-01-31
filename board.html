@@ -23,7 +23,7 @@
         async function init() {
             await downloadFromServer();
             tasks = JSON.parse(backend.getItem('tasks')) || [];
-            boardinfo();
+            updateHTML();
         }
     </script>
 </head>
@@ -36,13 +36,9 @@
         <div>
             <h4>TO DO</h4>
         </div>
-        <div id="boardContent" class="board-card  bg1">
-            
-          
+        <div id="todo" ondrop="moveTo('todo')" ondragover="allowDrop(event)" class="board-card  bg1">
+           
         </div>
-        
-
-
     </div>
 
 
@@ -50,14 +46,14 @@
         <div>
             <h4>DO TODAY</h4>
         </div>
-        <div class="board-card  bg2"></div>
+        <div id="dotoday" ondrop="moveTo('dotoday')" ondragover="allowDrop(event)" class="board-card  bg2"></div>
     </div>
 
     <div class="textAndField">
         <div>
             <h4>IN PROGRESS</h4>
         </div>
-        <div class="board-card  bg3"></div>
+        <div id="inprogress" ondrop="moveTo('inprogress')" ondragover="allowDrop(event)" class="board-card  bg3"></div>
     </div>
 
 
@@ -65,18 +61,8 @@
         <div>
             <h5>DONE</h5>
         </div>
-        <div class="board-card bg4"></div>
+        <div id="done" ondrop="moveTo('done')" ondragover="allowDrop(event)" class="board-card bg4"></div>
     </div>
-
-
-    
-
-
-
-
-
-
-
 
 
 </body>

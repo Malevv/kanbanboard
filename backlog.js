@@ -2,6 +2,9 @@
 
 function backlog() {
     for (let i = 0; i < tasks.length; i++) {
+        // backend funktioniert nicht, anil fragen??
+        // // category und priority auf chose... setzen???
+
 
         // minlength="5" mindestens 5 Zeichen ?
         // // required in felder von HTML Tasks angeben (Pflichtfelder)?
@@ -29,7 +32,6 @@ function backlog() {
                  <textarea name=""
                      id="discription">${tasks[i]['description']}</textarea>
              </div>
-             <img class="trash" src="img/trash.png" onclick="trash(${i})">
          </div>
      </div>
          `;
@@ -56,11 +58,4 @@ function prioType(i) {
         document.getElementById('prioColor' + i).classList.remove('dnone');
         document.getElementById('prioColor' + i).classList.add('prioH');
     }
-}
-
-
-
-function trash(i) {
-    tasks.splice(i, 1)
-    backend.setItem('tasks', JSON.stringify(tasks))
 }

@@ -16,8 +16,13 @@ async function addTasks() {
     let category = document.getElementById('cat');
     let priority = document.getElementById('cat-prio');
     let description = document.getElementById('description');
+    
+    let time = new Date();
+    time.getTime();
 
     let allTasks = {
+        'id': time.getTime(),
+        'list': 'todo',
         'title': title.value,
         'date': date.value,
         'category': category.value,
